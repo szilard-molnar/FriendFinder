@@ -1,34 +1,25 @@
-var tableData = require("../data/tableData");
-var waitListData = require("../data/waitinglistData");
+var tableData = require("./../data/friends.js");
 
 module.exports = function(app) {
 
   app.get("/api/friends", function(req, res) {
-    res.json(tableData);
-  });
-
-  app.get("/api/waitlist", function(req, res) {
-    res.json(waitListData);
-  });
-
-  app.post("/api/tables", function(req, res) {
-    
-    if (tableData.length < 5) {
-      tableData.push(req.body);
-      res.json(true);
-    }
-    else {
-      waitListData.push(req.body);
-      res.json(false);
+    for(var i = 0; i < tableData.friends.length; i++)
+    {
+        res.json(tableData.friends);
+        console.log(tableData.friends);
     }
   });
 
-
-  app.post("/api/clear", function(req, res) {
+  /*app.post("/api/friends", function(req, res) {
     
-    tableData.length = 0;
-    waitListData.length = 0;
+    for(var i = 0; i < friends.friends)
+    {
 
-    res.json({ ok: true });
-  });
-};
+
+    }
+
+
+})
+} 
+*/
+}

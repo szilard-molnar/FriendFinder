@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>
+            Find your best friend!!
+        </title>
     </head>
     <body>
-        <h1> Help me Rhonda! </h1>
+        <div class="jumbotron">
+            <h1 class="display-4">Find your best friend!!</h1>
+            <p class="lead">Click the button below to get to the survey page. After filling it you will get your match!!!</p>
+            <hr class="my-4">
+            <a class="btn btn-primary btn-lg" id="go-to-survey-button" href="#" role="button">Go to survey</a>   
+        </div>
+        <div class="bottom-links">
+            <p>
+                <a href="/api/friends">API Friends List</a>
+                |
+                <a href="https://github.com/szilard-molnar/FriendFinder">GitHub Repo</a>
+            </p>
+        </div>
+        <script type="text/javascript">
+            $("#go-to-survey-button").click(function() {
+                alert("I'm clicked");
+                location.href = "./survey";
+            });
+        </script>
     </body>
 </html>
