@@ -122,7 +122,49 @@
                 </div>
                 <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
               </form>
+
+              <!--modal for showing the match-->
+
+              <div id="myModal" class="modal">
+
+                    <div class="modal-content">
+                      <span id="modalClose" class="close">&times;</span>
+                      <h3>Your new best friend is: </h3>
+                      <br>
+                      <h4 id="newBestFriendName"></h4>
+                      <br>
+                      <img src="#" id="newBestFriendPhoto">
+                    </div>
+                  
+              </div>
+              <style>
+                  #myModal {
+                    display: none; /* Hidden by default */
+                    position: fixed; /* Stay in place */
+                    z-index: 1; /* Sit on top */
+                    left: 0;
+                    top: 0;
+                    width: 100%; /* Full width */
+                    height: 100%; /* Full height */
+                    overflow: auto; /* Enable scroll if needed */
+                    background-color: rgb(0,0,0); /* Fallback color */
+                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                }
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 15% auto; /* 15% from the top and centered */
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 80%; /* Could be more or less, depending on screen size */
+                }
+                #newBestFriendPhoto {
+                    width: 30%;
+                    margin-left: 33%;
+                }
+              </style>
         </div>
+
+
     </body>
 </html>
 
@@ -164,7 +206,13 @@
 
             var currentURL = window.location.origin;
             $.post(currentURL + "/api/friends", newPerson, function(data){
-                
+                $("#myModal").css("display", "block");
+                $("#newBestFriendName").text(data.name);
+                $("#newBestFriendPhoto").attr("src", data.photo);
+            })
+
+            $("#modalClose").click(function(){
+                $("#myModal").css("display", "none");
             })
 
 

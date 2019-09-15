@@ -41,7 +41,8 @@ module.exports = function(app) {
     }
   }
     friends.push(newUser);
-  console.log(newBestFriendIndex);
+    console.log("your new best friend is: " + friends[newBestFriendIndex].name);
+    console.log("your new best friend's photo: " + friends[newBestFriendIndex].photo);
     res.json(friends[newBestFriendIndex]);
     
 })

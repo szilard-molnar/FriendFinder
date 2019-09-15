@@ -1,6 +1,6 @@
 var friends = [{
-    "name":"Ahmed",
-    "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "name":"Peter",
+    "photo":"https://static.wixstatic.com/media/083e77_30d37c5780b944ef91a9c04a92ad843d~mv2_d_2048_1367_s_2.jpg/v1/fill/w_899,h_600,al_c,q_90,usm_1.30_0.10_0.05/083e77_30d37c5780b944ef91a9c04a92ad843d~mv2_d_2048_1367_s_2.jpg",
     "scores":[
         5,
         1,
