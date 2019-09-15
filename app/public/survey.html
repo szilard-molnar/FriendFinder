@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <title>Friend finder survey</title>
     </head>
     <body>
@@ -12,115 +13,170 @@
                 <div class="form-group">
                 <h3>About you</h3>
                   <label for="exampleFormControlInput1">Name</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                  <input type="text" class="form-control" id="name" placeholder="Name">
                     <br>
                   <label for="exampleFormControlInput1">Image link (required)</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Image URL">
+                  <input type="text" class="form-control" id="imageURL" placeholder="Image URL">
                 </div>
                 <hr>
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">I go out during weekdays.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)></option>
+                  <label for="question1">I go out during weekdays.</label>
+                  <select class="form-control" id="question1">
+                    <option value="empty">Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)></option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">I go out during the weekend.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question2">I go out during the weekend.</label>
+                  <select class="form-control" id="question2">
+                    <option value="empty">Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">I like to be alone.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question3">I like to be alone.</label>
+                  <select class="form-control" id="question3">
+                    <option value="empty">Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">I like rock music.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question4">I like rock music.</label>
+                  <select class="form-control" id="question4">
+                    <option value="empty" disabled selected>Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">I eat mac'n'cheese when I'm sad.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question5">I eat mac'n'cheese when I'm sad.</label>
+                  <select class="form-control" id="question5">
+                    <option value="empty" disabled selected>Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">I want/have a puppy.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question6">I want/have a puppy.</label>
+                  <select class="form-control" id="question6">
+                    <option value="empty" disabled selected>Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">I like to go to gym.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question7">I like to go to gym.</label>
+                  <select class="form-control" id="question7">
+                    <option value="empty" disabled selected>Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">If someone needs me I can make myself available for moral support.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question8">If someone needs me I can make myself available for moral support.</label>
+                  <select class="form-control" id="question8">
+                    <option value="empty" disabled selected>Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">You can get my friendship with a few beers.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question9">You can get my friendship with a few beers.</label>
+                  <select class="form-control" id="question9">
+                    <option value="empty" disabled selected>Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                   <br>
-                  <label for="exampleFormControlSelect1">I like to wake up early.</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="" disabled selected>Select option</option>
-                    <option>1 (Don't agree)</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5 (Totally agree)</option>
+                  <label for="question10">I like to wake up early.</label>
+                  <select class="form-control" id="question10">
+                    <option value="empty" disabled selected>Select option</option>
+                    <option value="1">1 (Don't agree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Totally agree)</option>
                   </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
               </form>
         </div>
     </body>
 </html>
+
+<script type="text/javascript">
+    $("#submitButton").click(function(event){
+        event.preventDefault();
+        //alert("you pressed the button!")
+        //checking if the form is filled
+        var filled = true;
+
+        if($("#name").val() === "" || $("#imageURL") === "")
+        {
+            filled = false;
+        }
+        else if($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty" )
+        {
+            filled = false;
+            //alert("not filled")
+        }
+
+        if(filled === true)
+        {
+            var newPerson = {
+                name: $("#name").val().trim(),
+                photo: $("#imageURL").val().trim(),
+                scores: [
+                    $("#question1").val(),
+                    $("#question2").val(),
+                    $("#question3").val(),
+                    $("#question4").val(),
+                    $("#question5").val(),
+                    $("#question6").val(),
+                    $("#question7").val(),
+                    $("#question8").val(),
+                    $("#question9").val(),
+                    $("#question10").val(),
+                ] 
+            };
+
+            var currentURL = window.location.origin;
+            $.post(currentURL + "/api/friends", newPerson, function(data){
+                
+            })
+
+
+
+        }
+        else
+        {
+            alert("Please fill the form completely!");
+        }
+        
+    });
+
+
+
+</script>
