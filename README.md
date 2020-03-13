@@ -1,6 +1,6 @@
 # Friend Finder
 
-This a basic social media application to find friends. According to your characteristics the app will find the best match for you, and you can find your best friends online.
+Basic social media application to find friends. According to your characteristics the app will find the best match for you, and you can find your best friends online.
 
 Technologies used: HTML3, CSS3, Bootstrap, JavaScript, jQuery, Node.js
 
